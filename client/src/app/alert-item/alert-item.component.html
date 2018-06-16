@@ -1,0 +1,6 @@
+<mat-list-item>
+  <strong>${{ alert.price }}</strong>&nbsp;
+  <strong *ngIf="alert.isUpward">Direction: Up</strong>
+  <strong *ngIf="!alert.isUpward">Direction: Down</strong>
+  <button class="btn btn-danger" (click)="deleteAlert(alert._id)">Delete</button>
+</mat-list-item>

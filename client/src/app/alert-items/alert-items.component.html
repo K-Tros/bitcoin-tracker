@@ -1,0 +1,18 @@
+<div class="row">
+  <mat-card class="card row">
+    <mat-card-title class="text-center">Add Alert</mat-card-title>
+    <mat-card-content class="text-center">
+      <app-add-alert (alertAdded)="alertAdded($event)"></app-add-alert>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="card row">
+    <mat-card-title class="text-center">Alert List</mat-card-title>
+    <mat-card-content class="text-center">
+      <mat-list>
+        <app-alert-item *ngFor="let alertObject of alertList"
+                       [alert]="alertObject"
+                       (alertDeleted)="alertDeleted($event)"></app-alert-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
